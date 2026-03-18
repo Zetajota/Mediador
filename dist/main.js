@@ -1,7 +1,7 @@
 import { ServidorChat } from "./ServidorChat/index.js";
 import { UsuarioEstandar, Administrador } from "./Componentes/index.js";
 console.log("────────────────────────────────────────────────────────");
-console.log(" PATRON MEDIADOR — Sala de Chat");
+console.log(" PATRON MEDIADOR — Sistema de Coordinación de Comunicaciones en Tiempo Real");
 console.log("────────────────────────────────────────────────────────\n");
 const servidor = new ServidorChat();
 const Sergio = new UsuarioEstandar("Sergio");
