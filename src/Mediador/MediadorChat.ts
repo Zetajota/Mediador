@@ -1,12 +1,8 @@
-// Interface del Mediador — define el contrato de comunicación central
-// No importa de Colegas para evitar dependencia circular;
-// Usuario se define en este mismo módulo (Mediador/Usuario.ts)
+// Interfaces del patron — viven juntas para evitar dependencia circular
 export interface MediadorChat {
   notificar(remitente: Usuario, mensaje: string): void;
 }
 
-// Interface Colega — se coloca aquí porque Usuario depende de MediadorChat,
-// no al revés. Así Colegas solo importa de Mediador (una dirección).
 export interface Usuario {
   readonly nombre: string;
   setMediador(mediador: MediadorChat): void;

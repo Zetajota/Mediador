@@ -1,6 +1,6 @@
 import type { MediadorChat, Usuario } from "../Mediador/MediadorChat.js";
 
-// ColegaConcreto2
+// Componente concreto 2
 export class Administrador implements Usuario {
   readonly nombre: string;
   private mediador!: MediadorChat;
@@ -22,8 +22,7 @@ export class Administrador implements Usuario {
     console.log(`  [${this.nombre}] mensaje de ${remitente}: "${mensaje}"`);
   }
 
-  // Accion exclusiva del Administrador: pasa por el mediador via comando interno.
-  // El Administrador no silencia directamente — lo solicita al servidor.
+  // Solo el admin puede silenciar — la accion la ejecuta el servidor
   silenciarUsuario(objetivo: Usuario): void {
     console.log(`  ${this.nombre} solicita al servidor silenciar a "${objetivo.nombre}".`);
     this.mediador.notificar(this, `CMD:SILENCIAR:${objetivo.nombre}`);

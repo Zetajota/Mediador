@@ -1,6 +1,6 @@
 import type { MediadorChat, Usuario } from "../Mediador/MediadorChat.js";
 
-// ColegaConcreto1
+// Componente concreto 1
 export class UsuarioEstandar implements Usuario {
   readonly nombre: string;
   private mediador!: MediadorChat;
